@@ -1,0 +1,37 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("I just need ", 0.1, 0.1),
+        ("To get it off ", 0.07, 0.1),
+        ("My chest ", 0.08, 0.1),
+        ("Yeah, more than you know ", 0.07, 0.2),
+        ("Yeah, more than you know ", 0.07, 0.4),
+        ("You should know that ", 0.1, 0.1),
+        ("Baby you're the best ", 0.08, 0.1),
+        ("Yeah, more than you know ", 0.08, 0.2),
+        ("Yeah, more than you know ", 0.08, 0.3),
+        ("I just ", 0.1, 0.4),
+        ("... ", 0.4, 0.4),
+        
+    ]
+
+    print("\n== More Than You Know - Axwell Ingrosso ==")
+    time.sleep(1.0)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
